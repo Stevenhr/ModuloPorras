@@ -61,11 +61,11 @@ return [
 
         'db_principal' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'db_principal'),
+            'host' => env('DB_HOST', 'www.idrd.gov.co'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'database'),
-            'username' => env('DB_USERNAME', 'user'),
-            'password' => env('DB_PASSWORD', 'pass'),
+            'database' => env('DB_DATABASE', 'idrdgov_simgeneral_prueba'),
+            'username' => env('DB_USERNAME', 'idrdgov_modpru'),
+            'password' => env('DB_PASSWORD', 'modulopruebas156'),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
