@@ -16,6 +16,7 @@
           <link rel="stylesheet" href="{{ asset('public/Css/jquery-ui.css') }}" media="screen">    
           <link rel="stylesheet" href="{{ asset('public/Css/bootstrap.min.css') }}" media="screen">    
           <link rel="stylesheet" href="{{ asset('public/Css/sticky-footer.css') }}" media="screen">    
+          <link rel="icon" type="image/png" href="{{ asset('public/Img/icono.png') }}" />
       @show
 
       @section('script')
@@ -25,7 +26,7 @@
           <script src="{{ asset('public/Js/main.js') }}"></script>
       @show
 
-      <title>Nombre Módulo</title>
+      <title>Módulo Deportes</title>
   </head>
 
   <body>
@@ -34,7 +35,7 @@
        <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
-            <a href="#" class="navbar-brand">SIM</a>
+            <a href="{{ URL::to( '/') }}" class="navbar-brand">SIM</a>
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -44,27 +45,25 @@
           <div class="navbar-collapse collapse" id="navbar-main">
             <ul class="nav navbar-nav">
               <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Opción 1 <span class="caret"></span></a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Administración<span class="caret"></span></a>
                 <ul class="dropdown-menu" aria-labelledby="themes">
-                  <li><a href="#">Default</a></li>
+                  <li><a href="#">Gestión Usuario</a></li>
                   <li class="divider"></li>
-                  <li><a href="#">Sub-Item 1</a></li>
+                  <li class=”{{ Request::is( 'personas') ? 'active' : '' }}”><a href="{{ URL::to( 'personas') }}">Crear usuario</a></li>
                   <li><a href="#">Sub-Item 2</a></li>
-                  <li><a href="#">Sub-Item 3</a></li>
-                  <li><a href="#">Sub-Item 4</a></li>
                 </ul>
               </li>
-              <li>
-                <a href="#">Opción 2</a>
-              </li>
+              
               <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Opción 3 <span class="caret"></span></a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Deportista<span class="caret"></span></a>
                 <ul class="dropdown-menu" aria-labelledby="download">
-                  <li><a href="#">Default</a></li>
+                  <li><a href="#">Gestión Deportista</a></li>
                   <li class="divider"></li>
-                  <li><a href="#">Sub-Item 1</a></li>
-                  <li><a href="#">Sub-Item 2</a></li>
-                  <li><a href="#">Sub-Item 3</a></li>
+                  <li><a href="{{URL::to('deportista')}}">Datos Generales</a></li>
+                  
+                  <li><a href="#">Gestión Economica</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Trasporte</a></li>
                   <li><a href="#">Sub-Item 4</a></li>
                 </ul>
               </li>
@@ -93,8 +92,8 @@
           <div class="page-header" id="banner">
             <div class="row">
               <div class="col-lg-8 col-md-7 col-sm-6">
-                <h1>MÓDULO</h1>
-                <p class="lead"><h1>##### ### ### ####</h1></p>
+                <h1>MÓDULO  DEPORTES</h1>
+                <p class="lead"><h1>Subdirección de Recreación y Deportes</h1></p>
               </div>
               <div class="col-lg-4 col-md-5 col-sm-6">
                  <div align="right"> 
