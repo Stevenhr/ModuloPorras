@@ -47,10 +47,11 @@
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Administración<span class="caret"></span></a>
                 <ul class="dropdown-menu" aria-labelledby="themes">
-                  <li><a href="#">Gestión Usuario</a></li>
+                  
+                  <li ><a href="#" style="color:#1995dc">GESTIÓN USUARIO</a></li>
                   <li class="divider"></li>
                   <li class=”{{ Request::is( 'personas') ? 'active' : '' }}”><a href="{{ URL::to( 'personas') }}">Crear usuario</a></li>
-                  <li><a href="#">Sub-Item 2</a></li>
+                  
                 </ul>
               </li>
               

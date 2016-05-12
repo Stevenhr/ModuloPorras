@@ -47,11 +47,11 @@ return [
     'connections' => [
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'db_modulo'),
+            'host' => env('DB_HOST', 'www.idrd.gov.co'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE22', 'database'),
-            'username' => env('DB_USERNAME', 'user'),
-            'password' => env('DB_PASSWORD', 'pass'),
+            'database' => env('DB_DATABASE22', 'idrdgov_sim_medalleria'),
+            'username' => env('DB_USERNAME', 'idrdgov_modulo2'),
+            'password' => env('DB_PASSWORD', 'I.Te*_ZVZ6.?'),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
