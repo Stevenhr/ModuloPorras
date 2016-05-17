@@ -124,7 +124,7 @@
                         {
                           var html = '';
                           $.each(data, function(i, e){
-                            html += '<li class="list-group-item" style="">'+
+                            html += '<li class="list-group-item" style="border:0">'+
                                        
                                             '<h2>MENÚ DEPORTISTA</h2>'+
                                             '<ul class="nav nav-pills">'+
