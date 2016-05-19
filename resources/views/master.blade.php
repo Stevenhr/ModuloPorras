@@ -58,7 +58,7 @@
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Deportista<span class="caret"></span></a>
                 <ul class="dropdown-menu" aria-labelledby="download">
-                  <li><a href="#">Gestión Deportista</a></li>
+                  <li><a href="#" style="color:#1995dc">GESTIÓN DEPORTIVAS UNO</a></li>
                   <li class="divider"></li>
                   <li><a href="{{URL::to('deportista')}}">Datos Generales</a></li>
                   
