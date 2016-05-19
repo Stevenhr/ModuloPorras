@@ -58,14 +58,11 @@
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Deportista<span class="caret"></span></a>
                 <ul class="dropdown-menu" aria-labelledby="download">
-                  <li><a href="#" style="color:#1995dc">GESTIÓN DEPORTIVAS UNO</a></li>
+                  <li><a href="#" style="color:#1995dc">GESTIÓN DEPORTIVA</a></li>
                   <li class="divider"></li>
-                  <li><a href="{{URL::to('deportista')}}">Datos Generales</a></li>
-                  
-                  <li><a href="#">Gestión Economica</a></li>
-                  <li class="divider"></li>
+                  <li><a href="{{URL::to('deportista')}}">Datos deportista</a></li>
+                  <li><a href="#" style="color:#1995dc">REPORTES</a></li>
                   <li><a href="#">Trasporte</a></li>
-                  <li><a href="#">Sub-Item 4</a></li>
                 </ul>
               </li>
             </ul>
