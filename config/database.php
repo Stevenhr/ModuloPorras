@@ -45,7 +45,7 @@ return [
     */
 
     'connections' => [
-        'mysql' => [
+        'db_deportes' => [
             'driver' => 'mysql',
             'host' => env('DB_HOST', 'www.idrd.gov.co'),
             'port' => env('DB_PORT', '3306'),
