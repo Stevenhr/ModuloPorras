@@ -87,7 +87,6 @@
                                           </div>
                                           <div class="col-md-4"></div>
                                         </div>
-
                                     <br><br>
                                     <div class="row">
                                       <div class="col-md-2">
@@ -100,7 +99,12 @@
                                         <label for="inputEmail" class="control-label pull-right">Pais Nacimiento:</label>
                                       </div>
                                       <div class="col-md-4">
-                                        <input class="form-control" placeholder="Pais Nacimiento" type="text" name="Id_Pais" readonly="readonly">
+                                        <select name="Id_Pais" id="" class="form-control">
+                                          <option value="">Seleccionar</option>
+                                          @foreach($paises as $pais)
+                                            <option value="{{ $pais['Id_Pais'] }}">{{ $pais['Nombre_Pais'] }}</option>
+                                          @endforeach
+                                        </select>
                                       </div>
                                     </div>
                                     <br>
@@ -124,7 +128,12 @@
                                         <label for="inputEmail" class="control-label pull-right">EPS:</label>
                                       </div>
                                       <div class="col-md-4">
-                                        <input class="form-control" placeholder="EPS" type="text" name="Primer_Apellido">
+                                        <select name="Id_Eps" id="Id_Eps" class="form-control">
+                                          <option value="">Seleccionar</option>
+                                          @foreach($eps as $eps)
+                                            <option value="{{ $eps['Id_Eps'] }}">{{ $eps['Nombre_Eps'] }}</option>
+                                          @endforeach  
+                                        </select>
                                       </div>
                                       <div class="col-md-2">
                                         <label for="inputEmail" class="control-label pull-right">Dirección Residencia:</label>
@@ -175,7 +184,10 @@
                                         <label for="inputEmail" class="control-label pull-right">Grupo Etnico:</label>
                                       </div>
                                       <div class="col-md-4">
-                                        <input class="form-control" placeholder="Grupo Etnico" type="text" name="Primer_Apellido">
+                                        <select name="Id_Etnia" id="Id_Etnia" class="form-control">
+                                          <option value="">Seleccionar</option>
+                                      
+                                        </select>
                                       </div>
                                     </div>
                                     <br>

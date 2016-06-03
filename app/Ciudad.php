@@ -2,9 +2,10 @@
 
 namespace App;
 
-use Idrd\Usuarios\Repo\Ciudad as MCiudad;
+use Idrd\Usuarios\Repo\Genero as MCiudad;
 
-class Ciudad extends MCiudad
+class Ciudad extends MCiudad 
 {
-    //
+	
+	//
 }

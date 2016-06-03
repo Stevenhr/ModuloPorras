@@ -13,6 +13,7 @@ class Deportista extends Model
 	protected $connection = '';
 	public $timestamps = true;
 
+
 	public function __construct()
 	{
 		$this->connection = config('connections.db_deportes');

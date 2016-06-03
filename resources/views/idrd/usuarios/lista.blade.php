@@ -165,6 +165,18 @@
 		        				</select>
 		        			</div>
 		        		</div>
+		        		<div class="col-xs-12 col-md-6">
+		        			<div class="form-group">
+		        				<label class="control-label" for="Id_Pais">* Departamento </label>
+		        				<select name="Id_Departamento" id="" class="form-control">
+		        					<option value="">Seleccionar</option>
+		        					@foreach($departamento as $departamento)
+		        						<option value="{{ $departamento['Id_Departamento'] }}">{{ $departamento['Nombre_Departamento'] }}</option>
+		        					@endforeach
+		        				</select>
+		        			</div>
+		        		</div>
+		        		
 		        	</fieldset>
 	      		</div>
 	      		<div class="modal-footer">

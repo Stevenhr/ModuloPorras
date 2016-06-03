@@ -2,9 +2,10 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Idrd\Usuarios\Repo\Departamento as MDepartamento;
 
-class Departamento extends Model
+class Departamento extends MDepartamento
 {
-    //
+	
+	//
 }

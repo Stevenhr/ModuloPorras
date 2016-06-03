@@ -65,7 +65,6 @@ $(function(e)
 
                 $('#personas').delegate('button[data-role="InformacionBasica"]', 'click', function(e){
                     var id = $(this).data('rel');
-                    
                      $.get(
                       URL+'/service/obtener/'+id,
                       {},
@@ -97,8 +96,8 @@ $(function(e)
                   }
                 });
 
-                var popular_errores_modal = function(data)
-                {
+             var popular_errores_modal = function(data)
+              {
                   $('#form_deportista .form-group').removeClass('has-error');
                   var selector = '';
                   for (var error in data){
@@ -122,41 +121,7 @@ $(function(e)
                           $('#form_deportista '+selector+'[name="'+error+'"]').closest('.form-group').addClass('has-error');
                       }
                   }
-                }
-
-          $('#form_deportista').on('submit', function(e){
-            
-                  $.post(
-                    'Deportista/ingreso',
-                    $(this).serialize(),
-                    function(data){
-                      if(data.status == 'error')
-                      {
-                        popular_errores_modal(data.errors);
-                      } else {
-                        $('#alerta').show();
-                        $('#modal_form_persona').modal('hide');
-
-                        setTimeout(function(){
-                          $('#alerta').hide();
-                        }, 4000)
-                      }
-                    },
-                    'json'
-                  );
-
-                  e.preventDefault();
-          });
-
-
-
-          var reset = function(e)
-                {
-                  $('input[name="buscador"]').val('');
-                  $('#buscar span').removeClass('glyphicon-remove').addClass('glyphicon-search');
-                  $('#personas').html($personas_actuales);
-                  $('#paginador').fadeIn();
-                };
+              }
 
 
                 var popular_modal_persona = function(persona)
@@ -168,7 +133,6 @@ $(function(e)
                   $('p[name="Cedula"]').val($.trim(persona['Cedula']));
                   cedulaDeportista=$.trim(persona['Cedula']);
                   
-
                   document.getElementById("titulo").innerHTML= "INFORMACIÓN BASICA";
                   document.getElementById("nombreDeport").innerHTML= nombreDeportista.toUpperCase();
                   document.getElementById("Cedula").innerHTML=cedulaDeportista;
@@ -176,10 +140,46 @@ $(function(e)
                   $('input[name="Id_Pais"]').val($.trim(persona['Id_Pais']));
                   $('input[name="Fecha_Nacimiento"]').val($.trim(persona['Fecha_Nacimiento']));
                   $('input[name="Nombre_Ciudad"]').val($.trim(persona['Nombre_Ciudad']));
-
+                  //$('select[name="Id_Eps"]').val(persona['Id_Etnia']);
                   
                   $('#modal_form_persona').modal('show');
                 };
+
+
+              $('#form_deportista').on('submit', function(e){
+                
+                      $.post(
+                        'Deportista/ingreso',
+                        $(this).serialize(),
+                        function(data){
+                          if(data.status == 'error')
+                          {
+                            popular_errores_modal(data.errors);
+                          } else {
+                            $('#alerta').show();
+                            $('#modal_form_persona').modal('hide');
+
+                            setTimeout(function(){
+                              $('#alerta').hide();
+                            }, 4000)
+                          }
+                        },
+                        'json'
+                      );
+
+                      e.preventDefault();
+              });
+
+              
+               var reset = function(e)
+                {
+                  $('input[name="buscador"]').val('');
+                  $('#buscar span').removeClass('glyphicon-remove').addClass('glyphicon-search');
+                  $('#personas').html($personas_actuales);
+                  $('#paginador').fadeIn();
+                };
+
+
 
 
  });

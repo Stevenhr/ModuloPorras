@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function () {                
     return view('welcome');
 });
@@ -29,6 +30,7 @@ Route::get('/personas/service/ciudad/{id_pais}', '\Idrd\Usuarios\Controllers\Loc
 Route::post('/personas/service/procesar/', '\Idrd\Usuarios\Controllers\PersonaController@procesar');
 Route::post('/Deportista/ingreso/', '\Idrd\Usuarios\Controllers\PersonaController@ejemplo');
 Route::get('/service/buscar/{key}', '\Idrd\Usuarios\Controllers\PersonaController@buscar');
+
 
 /*
 |--------------------------------------------------------------------------

@@ -79,6 +79,7 @@ $(function()
 
 	var popular_modal_persona = function(persona)
 	{
+		
 		$('select[name="Id_TipoDocumento"]').val(persona['Id_TipoDocumento']);
 		$('input[name="Cedula"]').val($.trim(persona['Cedula']));
 		$('input[name="Primer_Apellido"]').val($.trim(persona['Primer_Apellido']));
@@ -108,6 +109,7 @@ $(function()
 		        	case 'tipoDocumento':
 		        	case 'Id_Etnia':
 		        	case 'Id_Pais':
+		        	case 'Id_Departamento':
 		        		selector = 'select';
 		        	break;
 
