@@ -12,7 +12,7 @@ $(function(e)
                     $('#buscar').data('role', 'reset');
 
                     $.get(
-                      URL+'/service/buscar/'+key,
+                      'personaBuscarDeportista/'+key,
                       {}, 
                       function(data)
                       {
@@ -36,7 +36,7 @@ $(function(e)
                                                                   '<div class="col-xs-6 ">'+
                                                                             '<div class="pull-right btn-group" role="group" aria-label="Informacion">'+
                                                                               '<button type="button" data-role="InformacionBasica" data-rel="'+e['Id_Persona']+'" class="btn btn-primary">Información Basica</button>'+
-                                                                              '<button type="button" data-role="editar" data-rel="'+e['Id_Persona']+'" class="btn btn-default">Información Deportiva</button>'+
+                                                                              '<button type="button" data-role="InformacionDeportiva" data-rel="'+e['Id_Persona']+'" class="btn btn-default">Información Deportiva</button>'+
                                                                               '<button type="button" class="btn btn-primary">Apoyos y servicios</button>'+
                                                                             '</div>'+
                                                                   '</div>'+
@@ -67,13 +67,34 @@ $(function(e)
                     var id = $(this).data('rel');
                     
                      $.get(
-                      URL+'/service/obtener/'+id,
+                      'personaDeportista/'+id,
                       {},
                       function(data)
                       { 
                         if(data)
                         {
                           popular_modal_persona(data);
+                        }
+                      },
+                      'json'
+                    );
+                  });
+
+                $('#personas').delegate('button[data-role="InformacionDeportiva"]', 'click', function(e){
+                    var id = $(this).data('rel');
+                    
+                     $.get(
+                      'personaDeportistaDatos/'+id,
+                      {},
+                      function(data)
+                      { 
+                        alert(data);
+                        if(data)
+                        {
+                          
+                          $('.modal-content').html(data);
+                          $('#modal_form_persona').modal('show');
+
                         }
                       },
                       'json'

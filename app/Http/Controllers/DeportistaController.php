@@ -11,4 +11,7 @@ class DeportistaController extends Controller
     public function datos(){
     	return view('deportista');
     }
+
+    
 }
+
